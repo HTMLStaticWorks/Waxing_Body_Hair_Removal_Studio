@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftercare Guide | VelvetGlow Wax Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3e2723',
+                        secondary: '#fdfbf7',
+                        neutral: '#fdfbf7',
+                        accent: '#c87c71',
+                        highlight: '#e6d5b8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="overflow-x-hidden antialiased bg-white dark:bg-[#121212]">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 header-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <i data-lucide="sparkles" class="text-accent w-8 h-8 group-hover:scale-110 transition-transform duration-300"></i>
+                    <span class="font-serif text-2xl font-semibold tracking-wide text-primary dark:text-white">VelvetGlow</span>
+                </a>
+                
+                <nav class="hidden xl:flex space-x-8 xl:space-x-12 rtl:space-x-reverse">
+                    <a href="index.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Home 1</a>
+                    <a href="home-2.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Home 2</a>
+                    <a href="about.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">About</a>
+                    <a href="services.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Services</a>
+                    <a href="pricing.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Pricing</a>
+                    <a href="aftercare.html" class="text-primary font-medium hover:text-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-accent after:scale-x-100 after:origin-left dark:text-white">Aftercare</a>
+                    <a href="contact.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden xl:flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors">
+                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <button id="rtl-toggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors">
+                        <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
+                    </button>
+                    <a href="contact.html" class="btn-primary">Book Now</a>
+                </div>
+
+                <div class="xl:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 text-gray-600 dark:text-gray-300">
+                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-gray-600 dark:text-gray-300" aria-expanded="false">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 z-40 bg-white dark:bg-gray-900 pt-24 px-6 overflow-y-auto w-full h-full">
+            <nav class="flex flex-col space-y-6" aria-label="Mobile Navigation">
+                <a href="index.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Home 1</a>
+                <a href="home-2.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Home 2</a>
+                <a href="about.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">About</a>
+                <a href="services.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Services</a>
+                <a href="pricing.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Pricing</a>
+                <a href="aftercare.html" class="text-2xl font-serif text-accent dark:text-accent">Aftercare</a>
+                <a href="contact.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Contact</a>
+                
+                <div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col gap-4">
+                    <button id="rtl-toggle-mobile" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors w-fit" aria-label="Toggle RTL Mode"><i data-lucide="arrow-left-right" class="w-6 h-6"></i></button>
+                    <a href="contact.html" class="btn-primary w-full text-center mt-4">Book Now</a>
+                </div>
+            </nav>
+        </div>
+
+    <main>
+        <!-- SECTION 1: AFTERCARE HERO -->
+        <section class="relative pt-32 pb-20 bg-primary text-white overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop" alt="Aftercare Background" class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-aos="zoom-out" data-aos-duration="2000">
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <span class="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block" data-aos="fade-down">Post-Treatment</span>
+                <h1 class="text-5xl md:text-6xl font-serif text-white mb-6" data-aos="fade-up" data-aos-delay="100">Aftercare Guide</h1>
+                <p class="text-lg text-white/80 font-light mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    The secret to prolonged smoothness and preventing irritation lies in how you care for your skin after your session.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FIRST 24 HOURS -->
+        <section class="py-20 bg-secondary dark:bg-[#1a1a1a]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-serif text-primary dark:text-white mb-4">The Crucial First 24 Hours</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Your hair follicles remain open and susceptible to bacteria and irritation immediately following treatment.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-red-100 dark:border-red-900/30" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded-full flex items-center justify-center text-red-500 mb-6">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-primary dark:text-white mb-3">Avoid Excessive Heat</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">No hot baths, saunas, steam rooms, or tanning beds. Stick to lukewarm or cool showers to allow follicles to close properly.</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-red-100 dark:border-red-900/30" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded-full flex items-center justify-center text-red-500 mb-6">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-primary dark:text-white mb-3">Skip the Workout</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Avoid intense workouts or activities that cause excessive sweating, as sweat contains bacteria that can easily enter open follicles.</p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-red-100 dark:border-red-900/30" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded-full flex items-center justify-center text-red-500 mb-6">
+                            <i data-lucide="hand" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-primary dark:text-white mb-3">Hands Off & Loose Fit</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Avoid unnecessary touching of the treated area. Wear loose, breathable cotton clothing to prevent friction and allow the skin to breathe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: 24-48 HOUR CARE -->
+        <section class="py-20 bg-white dark:bg-[#121212]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-serif text-primary dark:text-white mb-4">24–48 Hour Care Phase</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Transitioning into maintenance to keep your skin hydrated and calm.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 space-y-8" data-aos="fade-right">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center text-green-600 shrink-0 mt-1">
+                                <i data-lucide="droplet" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-2">Gentle Cleansing</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Wash the area with a mild, unscented cleanser. Avoid harsh soaps or shower gels with heavy fragrances.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center text-green-600 shrink-0 mt-1">
+                                <i data-lucide="sun" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-2">Hydration & Calming</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Apply aloe vera or a tea tree oil lotion to soothe any lingering redness. Keep the skin deeply moisturized with an organic body oil.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-yellow-50 dark:bg-yellow-900/20 rounded-full flex items-center justify-center text-yellow-600 shrink-0 mt-1">
+                                <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-2">Wait to Exfoliate</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Do NOT exfoliate the skin for at least 48 hours post-treatment. Your skin is already naturally exfoliated during the waxing process.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 md:order-2 h-[400px] rounded-2xl overflow-hidden shadow-lg" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" alt="Calming Skincare" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: PREVENT INGROWN HAIRS -->
+        <section class="py-24 bg-primary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block">Long Term Care</span>
+                    <h2 class="text-4xl md:text-5xl font-serif mb-4">Preventing Ingrowns</h2>
+                    <p class="text-white/80 max-w-2xl mx-auto font-light">Consistent care is the key to preventing trapped hairs and bumps.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Step 1 -->
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-accent/50 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-4xl font-serif text-accent mb-4">01</div>
+                        <h3 class="text-xl font-serif mb-3">Exfoliate Regualrly</h3>
+                        <p class="text-sm text-white/70">Starting 48-72 hours after treatment, use a gentle scrub or exfoliating mitt 2-3 times a week to remove dead skin cells that block hair growth.</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-accent/50 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-4xl font-serif text-accent mb-4">02</div>
+                        <h3 class="text-xl font-serif mb-3">Daily Moisture</h3>
+                        <p class="text-sm text-white/70">Keep the skin soft and pliable. Dry, hardened skin forces growing hairs to curl back under the surface. Use a non-comedogenic lotion.</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-accent/50 transition-colors" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-4xl font-serif text-accent mb-4">03</div>
+                        <h3 class="text-xl font-serif mb-3">Avoid Friction</h3>
+                        <p class="text-sm text-white/70">Tight clothing, especially right after treatment or during exercise, can push hairs back down into the follicles.</p>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-accent/50 transition-colors" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-4xl font-serif text-accent mb-4">04</div>
+                        <h3 class="text-xl font-serif mb-3">Treat Early</h3>
+                        <p class="text-sm text-white/70">If you spot a bump, do not pick or squeeze. Apply a specialized ingrown serum containing salicylic or glycolic acid to gently release it.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: AFTERCARE CHECKLIST & FAQ -->
+        <section class="py-24 bg-secondary dark:bg-[#1a1a1a]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="mb-20">
+                    <h2 class="text-3xl font-serif text-primary dark:text-white mb-8 text-center" data-aos="fade-up">Frequently Asked Questions</h2>
+                    
+                    <div class="space-y-4" data-aos="fade-up">
+                        
+                        <!-- FAQ 1 -->
+                        <div class="border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#121212] overflow-hidden">
+                            <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                                <span class="font-serif text-primary dark:text-white text-lg">How long should my hair be before my appointment?</span>
+                                <i data-lucide="plus" class="w-5 h-5 text-accent transition-transform duration-300 transform"></i>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="px-6 pb-6 text-gray-600 dark:text-gray-400 text-sm">
+                                    For optimal results, hair should be at least 1/4 inch long—about the size of a grain of rice. This usually equates to 2-3 weeks of growth after shaving. If the hair is too short, the wax won't be able to grip it properly.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 2 -->
+                        <div class="border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#121212] overflow-hidden">
+                            <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                                <span class="font-serif text-primary dark:text-white text-lg">Can I get waxed during my menstrual cycle?</span>
+                                <i data-lucide="plus" class="w-5 h-5 text-accent transition-transform duration-300 transform"></i>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="px-6 pb-6 text-gray-600 dark:text-gray-400 text-sm">
+                                    Yes, you absolutely can. Just be aware that your body is naturally more sensitive to pain a few days before and during your cycle. You must wear a clean tampon or menstrual cup during an intimate waxing service.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 3 -->
+                        <div class="border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#121212] overflow-hidden">
+                            <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                                <span class="font-serif text-primary dark:text-white text-lg">Should I trim before I come in?</span>
+                                <i data-lucide="plus" class="w-5 h-5 text-accent transition-transform duration-300 transform"></i>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                                <p class="px-6 pb-6 text-gray-600 dark:text-gray-400 text-sm">
+                                    Please leave the trimming to us! It's very easy to trim too short at home, which makes the wax less effective. Our specialists will quickly and safely trim any hair that is too long prior to your service.
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="text-center bg-white dark:bg-gray-800 p-10 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-700" data-aos="zoom-in">
+                    <h2 class="text-3xl font-serif text-primary dark:text-white mb-4">Ready to maintain that glow?</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8">Scheduling your next appointment every 4 weeks ensures the hair grows back finer and sparser over time.</p>
+                    <a href="contact.html" class="btn-primary">Book Next Appointment</a>
+                </div>
+                
+            </div>
+        </section>
+        
+        <script>
+            // FAQ Accordion Logic
+            document.querySelectorAll('.faq-toggle').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('i');
+                    
+                    // Close all others
+                    document.querySelectorAll('.faq-content').forEach(otherContent => {
+                        if (otherContent !== content) {
+                            otherContent.style.maxHeight = null;
+                            otherContent.previousElementSibling.querySelector('i').classList.remove('rotate-45');
+                        }
+                    });
+                    
+                    // Toggle current
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('rotate-45');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.add('rotate-45');
+                    }
+                });
+            });
+        </script>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-white dark:bg-[#111111] pt-20 pb-10 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Col -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6 group inline-flex">
+                        <i data-lucide="sparkles" class="text-accent w-8 h-8 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-serif text-2xl font-semibold tracking-wide text-primary dark:text-white">VelvetGlow</span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                        A premium sanctuary dedicated to the art of gentle, effective body hair removal. Experience smooth like never before.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 hover:scale-110 hover:shadow-md transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 hover:scale-110 hover:shadow-md transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links Col 1 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Studio</h4>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact & Location</a></li>
+                        <li><a href="pricing.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Pricing Menu</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links Col 2 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Body Waxing</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Facial Waxing</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Organic Sugaring</a></li>
+                        <li><a href="aftercare.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Aftercare Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Stay Smooth</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe for skincare tips and exclusive studio offers.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" class="bg-secondary dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-3 focus:outline-none focus:border-accent w-full text-sm dark:text-white" required>
+                        <button type="submit" class="btn-primary py-3 w-full text-sm uppercase tracking-widest">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">&copy; 2026 VelvetGlow Wax Studio. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <div class="flex gap-4 text-sm text-gray-500">
+                        <a href="#" class="hover:text-accent transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-accent transition-colors">Terms of Service</a>
+                    </div>
+                    <!-- Back to Top Button -->
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true });
+        }
+    </script>
+</body>
+</html>

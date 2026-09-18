@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | VelvetGlow Wax Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3e2723',
+                        secondary: '#fdfbf7',
+                        neutral: '#fdfbf7',
+                        accent: '#c87c71',
+                        highlight: '#e6d5b8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="overflow-x-hidden antialiased bg-white dark:bg-[#121212]">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 header-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <i data-lucide="sparkles" class="text-accent w-8 h-8 group-hover:scale-110 transition-transform duration-300"></i>
+                    <span class="font-serif text-2xl font-semibold tracking-wide text-primary dark:text-white">VelvetGlow</span>
+                </a>
+                
+                <nav class="hidden xl:flex space-x-8 xl:space-x-12 rtl:space-x-reverse">
+                    <a href="index.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Home 1</a>
+                    <a href="home-2.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Home 2</a>
+                    <a href="about.html" class="text-primary font-medium hover:text-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-accent after:scale-x-100 after:origin-left dark:text-white">About</a>
+                    <a href="services.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Services</a>
+                    <a href="pricing.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Pricing</a>
+                    <a href="aftercare.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Aftercare</a>
+                    <a href="contact.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden xl:flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors">
+                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <button id="rtl-toggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors">
+                        <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
+                    </button>
+                    <a href="contact.html" class="btn-primary">Book Now</a>
+                </div>
+
+                <div class="xl:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 text-gray-600 dark:text-gray-300">
+                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-gray-600 dark:text-gray-300" aria-expanded="false">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 z-40 bg-white dark:bg-gray-900 pt-24 px-6 overflow-y-auto w-full h-full">
+            <nav class="flex flex-col space-y-6" aria-label="Mobile Navigation">
+                <a href="index.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Home 1</a>
+                <a href="home-2.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Home 2</a>
+                <a href="about.html" class="text-2xl font-serif text-accent dark:text-accent">About</a>
+                <a href="services.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Services</a>
+                <a href="pricing.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Pricing</a>
+                <a href="aftercare.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Aftercare</a>
+                <a href="contact.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Contact</a>
+                
+                <div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col gap-4">
+                    <button id="rtl-toggle-mobile" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors w-fit" aria-label="Toggle RTL Mode"><i data-lucide="arrow-left-right" class="w-6 h-6"></i></button>
+                    <a href="contact.html" class="btn-primary w-full text-center mt-4">Book Now</a>
+                </div>
+            </nav>
+        </div>
+
+    <main>
+        <!-- SECTION 1: ABOUT HERO -->
+        <section class="relative pt-32 pb-20 bg-secondary dark:bg-[#1a1a1a] overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.pexels.com/photos/3951373/pexels-photo-3951373.jpeg" alt="About VelvetGlow" class="w-full h-full object-cover opacity-20 dark:opacity-10" data-aos="zoom-out" data-aos-duration="2000">
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <span class="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block" data-aos="fade-down">Behind the Brand</span>
+                <h1 class="text-5xl md:text-6xl font-serif text-primary dark:text-white mb-6" data-aos="fade-up" data-aos-delay="100">About VelvetGlow</h1>
+                <p class="text-lg text-gray-600 dark:text-gray-400 font-light max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="200">
+                    Discover the philosophy, people, and passion that makes our sanctuary the premier destination for modern body hair removal.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: STUDIO STORY -->
+        <section class="relative py-24 bg-white dark:bg-[#121212] overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <div class="relative h-[500px] lg:h-[650px] rounded-[2rem] overflow-hidden shadow-2xl" data-aos="fade-right">
+                        <img src="https://images.pexels.com/photos/35103881/pexels-photo-35103881.jpeg" alt="Studio Reception" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div data-aos="fade-left" class="lg:pl-8">
+                        <span class="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block">Our Story</span>
+                        <h1 class="text-5xl md:text-6xl font-serif text-primary dark:text-white mb-6">Redefining Hair Removal</h1>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 font-light mb-6">
+                            Founded on the belief that body hair removal shouldn't be an agonizing chore. VelvetGlow was created to transform a clinical routine into a luxurious, restorative ritual.
+                        </p>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 font-light mb-8">
+                            We meticulously designed our sanctuary to alleviate the anxiety often associated with intimate waxing, utilizing European hard waxes and organic sugaring pastes that prioritize the integrity of your skin.
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop" alt="Founder" class="w-16 h-16 rounded-full object-cover border-2 border-accent">
+                            <div>
+                                <h4 class="font-serif text-primary dark:text-white font-semibold">Sarah Jenkins</h4>
+                                <p class="text-sm text-gray-500 uppercase tracking-widest">Founder & Master Esthetician</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: OUR PHILOSOPHY -->
+        <section class="py-24 bg-secondary dark:bg-[#1a1a1a]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-primary dark:text-white mb-4">Our Philosophy</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The four pillars that guide every treatment we perform.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Comfort -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 bg-highlight/30 rounded-full flex items-center justify-center text-accent mx-auto mb-6">
+                            <i data-lucide="feather" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-primary dark:text-white mb-3">Comfort</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Heated beds, low-temperature wax, and swift techniques dramatically minimize discomfort.</p>
+                    </div>
+                    
+                    <!-- Hygiene -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-16 h-16 bg-highlight/30 rounded-full flex items-center justify-center text-accent mx-auto mb-6">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-primary dark:text-white mb-3">Hygiene</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Strict no-double-dipping policies. Medical-grade sterilization of all tools and treatment surfaces.</p>
+                    </div>
+                    
+                    <!-- Confidence -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-16 h-16 bg-highlight/30 rounded-full flex items-center justify-center text-accent mx-auto mb-6">
+                            <i data-lucide="sparkles" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-primary dark:text-white mb-3">Confidence</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">A completely judgement-free zone where every body type is welcomed and celebrated.</p>
+                    </div>
+                    
+                    <!-- Care -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-16 h-16 bg-highlight/30 rounded-full flex items-center justify-center text-accent mx-auto mb-6">
+                            <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-serif text-primary dark:text-white mb-3">Personalized Care</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Every treatment begins with a skin analysis to determine the optimal removal method for you.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: TREATMENT APPROACH -->
+        <section class="py-24 bg-white dark:bg-[#121212]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <div data-aos="fade-right">
+                        <h2 class="text-4xl font-serif text-primary dark:text-white mb-8">The 4-Step Approach</h2>
+                        
+                        <div class="space-y-8">
+                            <!-- Step 1 -->
+                            <div class="flex gap-6">
+                                <div class="text-4xl font-serif text-highlight dark:text-gray-700">01</div>
+                                <div>
+                                    <h4 class="text-xl font-serif text-primary dark:text-white mb-2">Analyze</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">We examine the hair growth pattern, length, and the condition of your skin barrier.</p>
+                                </div>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="flex gap-6">
+                                <div class="text-4xl font-serif text-highlight dark:text-gray-700">02</div>
+                                <div>
+                                    <h4 class="text-xl font-serif text-primary dark:text-white mb-2">Cleanse & Prep</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">The area is thoroughly sanitized and a protective barrier oil is applied to shield the skin.</p>
+                                </div>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="flex gap-6">
+                                <div class="text-4xl font-serif text-highlight dark:text-gray-700">03</div>
+                                <div>
+                                    <h4 class="text-xl font-serif text-primary dark:text-white mb-2">Execute</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Working in small, swift sections to minimize discomfort while ensuring complete removal.</p>
+                                </div>
+                            </div>
+                            <!-- Step 4 -->
+                            <div class="flex gap-6">
+                                <div class="text-4xl font-serif text-highlight dark:text-gray-700">04</div>
+                                <div>
+                                    <h4 class="text-xl font-serif text-primary dark:text-white mb-2">Soothe</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">A cooling, antibacterial serum is massaged into the open follicles to prevent inflammation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-xl" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=2070&auto=format&fit=crop" alt="Treatment Process" class="w-full h-full object-cover">
+                        <!-- Play button overlay for visual aesthetic -->
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center cursor-pointer hover:bg-white/50 transition-colors">
+                                <i data-lucide="play" class="w-8 h-8 text-white ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: STUDIO STANDARDS -->
+        <section class="py-24 bg-primary text-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block">The Gold Standard</span>
+                    <h2 class="text-4xl font-serif mb-4 text-white">Studio Excellence</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Standard 1 -->
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1000&auto=format&fit=crop" alt="Products" class="w-full h-40 object-cover rounded-xl mb-6">
+                        <h3 class="text-xl font-serif mb-2 text-white">Premium Products</h3>
+                        <p class="text-sm text-white/70">We exclusively use hard wax imported from Europe and 100% organic, locally sourced sugaring pastes.</p>
+                    </div>
+                    
+                    <!-- Standard 2 -->
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1000&auto=format&fit=crop" alt="Spaces" class="w-full h-40 object-cover rounded-xl mb-6">
+                        <h3 class="text-xl font-serif mb-2 text-white">Private Suites</h3>
+                        <p class="text-sm text-white/70">Our sound-insulated, climate-controlled suites ensure your complete privacy and relaxation during treatment.</p>
+                    </div>
+                    
+                    <!-- Standard 3 -->
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl md:col-span-2 lg:col-span-1 md:w-1/2 md:mx-auto lg:w-full lg:mx-0" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=1000&auto=format&fit=crop" alt="Specialists" class="w-full h-40 object-cover rounded-xl mb-6">
+                        <h3 class="text-xl font-serif mb-2 text-white">Licensed Specialists</h3>
+                        <p class="text-sm text-white/70">Every specialist undergoes an intensive 8-week VelvetGlow bootcamp before ever seeing a client.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: VISIT VELVETGLOW -->
+        <section class="py-24 bg-white dark:bg-[#121212]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-secondary dark:bg-gray-800 rounded-[3rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 p-4 md:p-12">
+                    
+                    <div class="lg:col-span-6 p-4 md:p-8" data-aos="fade-right">
+                        <h2 class="text-4xl md:text-5xl font-serif text-primary dark:text-white mb-6">Experience the glow for yourself.</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-10 text-lg">
+                            We invite you to step into our sanctuary and discover how effortless hair removal can be.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+                            <div>
+                                <h4 class="font-serif text-lg text-primary dark:text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-accent"></i> Location
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">123 Velvet Avenue<br>New York, NY 10012</p>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-lg text-primary dark:text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="clock" class="w-5 h-5 text-accent"></i> Hours
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Tue - Sat: 10am - 7pm<br>Sun & Mon: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="btn-primary">Book Your Visit</a>
+                    </div>
+                    
+                    <div class="lg:col-span-6 h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-md" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=2070&auto=format&fit=crop" alt="Spa Location" class="w-full h-full object-cover">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-white dark:bg-[#111111] pt-20 pb-10 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Col -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6 group inline-flex">
+                        <i data-lucide="sparkles" class="text-accent w-8 h-8 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-serif text-2xl font-semibold tracking-wide text-primary dark:text-white">VelvetGlow</span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                        A premium sanctuary dedicated to the art of gentle, effective body hair removal. Experience smooth like never before.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 hover:scale-110 hover:shadow-md transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 hover:scale-110 hover:shadow-md transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links Col 1 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Studio</h4>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact & Location</a></li>
+                        <li><a href="pricing.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Pricing Menu</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links Col 2 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Body Waxing</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Facial Waxing</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Organic Sugaring</a></li>
+                        <li><a href="aftercare.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Aftercare Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Stay Smooth</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe for skincare tips and exclusive studio offers.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" class="bg-secondary dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-3 focus:outline-none focus:border-accent w-full text-sm dark:text-white" required>
+                        <button type="submit" class="btn-primary py-3 w-full text-sm uppercase tracking-widest">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">&copy; 2026 VelvetGlow Wax Studio. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <div class="flex gap-4 text-sm text-gray-500">
+                        <a href="#" class="hover:text-accent transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-accent transition-colors">Terms of Service</a>
+                    </div>
+                    <!-- Back to Top Button -->
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true });
+        }
+    </script>
+</body>
+</html>

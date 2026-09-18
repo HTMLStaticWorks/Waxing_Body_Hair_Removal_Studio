@@ -1,0 +1,74 @@
+/* assets/css/dark-mode.css */
+
+html.dark {
+    color-scheme: dark;
+}
+
+html.dark body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+html.dark h1, 
+html.dark h2, 
+html.dark h3, 
+html.dark h4, 
+html.dark h5, 
+html.dark h6 {
+    color: #ffffff;
+}
+
+/* Base button overrides for dark mode */
+html.dark .btn-outline {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+html.dark .btn-outline:hover {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+/* Background overrides */
+html.dark .bg-neutral {
+    background-color: #1a1a1a;
+}
+html.dark .bg-white {
+    background-color: #121212;
+}
+html.dark .bg-gray-50 {
+    background-color: #181818;
+}
+html.dark .bg-gray-100 {
+    background-color: #222222;
+}
+
+/* Border overrides */
+html.dark .border-gray-100 {
+    border-color: #2a2a2a;
+}
+html.dark .border-gray-200 {
+    border-color: #333333;
+}
+
+/* Text overrides */
+html.dark .text-gray-900,
+html.dark .text-gray-800 {
+    color: #ffffff;
+}
+html.dark .text-gray-700,
+html.dark .text-gray-600 {
+    color: #cccccc;
+}
+html.dark .text-gray-500 {
+    color: #a0a0a0;
+}
+
+/* Shadow adjustments for dark mode */
+html.dark .shadow-sm,
+html.dark .shadow,
+html.dark .shadow-md,
+html.dark .shadow-lg,
+html.dark .shadow-xl,
+html.dark .shadow-2xl {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}

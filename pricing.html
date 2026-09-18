@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Menu | VelvetGlow Wax Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3e2723',
+                        secondary: '#fdfbf7',
+                        neutral: '#fdfbf7',
+                        accent: '#c87c71',
+                        highlight: '#e6d5b8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="overflow-x-hidden antialiased bg-white dark:bg-[#121212]">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 header-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <i data-lucide="sparkles" class="text-accent w-8 h-8 group-hover:scale-110 transition-transform duration-300"></i>
+                    <span class="font-serif text-2xl font-semibold tracking-wide text-primary dark:text-white">VelvetGlow</span>
+                </a>
+                
+                <nav class="hidden xl:flex space-x-8 xl:space-x-12 rtl:space-x-reverse">
+                    <a href="index.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Home 1</a>
+                    <a href="home-2.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Home 2</a>
+                    <a href="about.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">About</a>
+                    <a href="services.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Services</a>
+                    <a href="pricing.html" class="text-primary font-medium hover:text-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-accent after:scale-x-100 after:origin-left dark:text-white">Pricing</a>
+                    <a href="aftercare.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Aftercare</a>
+                    <a href="contact.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-accent dark:hover:text-accent transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden xl:flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors">
+                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <button id="rtl-toggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors">
+                        <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
+                    </button>
+                    <a href="contact.html" class="btn-primary">Book Now</a>
+                </div>
+
+                <div class="xl:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 text-gray-600 dark:text-gray-300">
+                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-gray-600 dark:text-gray-300" aria-expanded="false">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 z-40 bg-white dark:bg-gray-900 pt-24 px-6 overflow-y-auto w-full h-full">
+        <nav class="flex flex-col space-y-6" aria-label="Mobile Navigation">
+            <a href="index.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Home 1</a>
+            <a href="home-2.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Home 2</a>
+            <a href="about.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">About</a>
+            <a href="services.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Services</a>
+            <a href="pricing.html" class="text-2xl font-serif text-accent dark:text-accent">Pricing</a>
+            <a href="aftercare.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Aftercare</a>
+            <a href="contact.html" class="text-2xl font-serif text-gray-800 dark:text-gray-200 hover:text-accent transition-colors">Contact</a>
+            
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col gap-4">
+                <button id="rtl-toggle-mobile" class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors w-fit" aria-label="Toggle RTL Mode"><i data-lucide="arrow-left-right" class="w-6 h-6"></i></button>
+                <a href="contact.html" class="btn-primary w-full text-center mt-4">Book Now</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <!-- SECTION 1: PRICING HERO -->
+        <section class="relative pt-32 pb-20 bg-primary text-white overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.pexels.com/photos/9146381/pexels-photo-9146381.jpeg" alt="Pricing Background" class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-aos="zoom-out" data-aos-duration="2000">
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <span class="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block" data-aos="fade-down">Investment</span>
+                <h1 class="text-5xl md:text-6xl font-serif text-white mb-6" data-aos="fade-up" data-aos-delay="100">Pricing Menu</h1>
+                <p class="text-lg text-white/80 font-light mb-10" data-aos="fade-up" data-aos-delay="200">
+                    Transparent, competitive pricing for premium services. All treatments include organic pre-care and soothing post-care application.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FACIAL PRICING -->
+        <section class="py-16 bg-white dark:bg-[#121212]">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-10" data-aos="fade-right">
+                    <i data-lucide="sparkles" class="w-6 h-6 text-accent"></i>
+                    <h2 class="text-3xl font-serif text-primary dark:text-white">Facial Treatments</h2>
+                    <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow ml-4"></div>
+                </div>
+                
+                <div class="space-y-6" data-aos="fade-up">
+                    
+                    <!-- Pricing Item -->
+                    <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                        <div>
+                            <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Brow Sculpting</h4>
+                            <p class="text-sm text-gray-500">Mapping, wax/thread, trim & tweeze</p>
+                        </div>
+                        <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$25</div>
+                    </div>
+                    
+                    <!-- Pricing Item -->
+                    <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                        <div>
+                            <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Upper Lip</h4>
+                            <p class="text-sm text-gray-500">Gentle hard wax</p>
+                        </div>
+                        <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$15</div>
+                    </div>
+                    
+                    <!-- Pricing Item -->
+                    <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                        <div>
+                            <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Chin & Jawline</h4>
+                            <p class="text-sm text-gray-500">Targeted coarse hair removal</p>
+                        </div>
+                        <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$18</div>
+                    </div>
+                    
+                    <!-- Pricing Item -->
+                    <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                        <div>
+                            <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Sideburns</h4>
+                            <p class="text-sm text-gray-500">Soft blending</p>
+                        </div>
+                        <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$15</div>
+                    </div>
+                    
+                    <!-- Pricing Item -->
+                    <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                        <div>
+                            <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Full Face</h4>
+                            <p class="text-sm text-gray-500">Includes brows, lip, chin, cheeks, sideburns</p>
+                        </div>
+                        <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$55</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: BODY PRICING -->
+        <section class="py-16 bg-white dark:bg-[#121212]">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-10" data-aos="fade-right">
+                    <i data-lucide="droplet" class="w-6 h-6 text-accent"></i>
+                    <h2 class="text-3xl font-serif text-primary dark:text-white">Body Treatments</h2>
+                    <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow ml-4"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6" data-aos="fade-up">
+                    
+                    <!-- Left Column -->
+                    <div class="space-y-6">
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Underarms</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$25</div>
+                        </div>
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Half Arms</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$35</div>
+                        </div>
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Full Arms</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$45</div>
+                        </div>
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Back (Full)</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$65</div>
+                        </div>
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Chest</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$35</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div class="space-y-6">
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Half Legs</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$45</div>
+                        </div>
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Full Legs</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$75</div>
+                        </div>
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Bikini Line</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$40</div>
+                        </div>
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Brazilian</h4>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$65</div>
+                        </div>
+                        <div class="group flex justify-between items-end border-b border-gray-100 dark:border-gray-800 pb-4 relative">
+                            <div>
+                                <h4 class="text-lg font-serif text-primary dark:text-white mb-1 group-hover:text-accent transition-colors">Full Body</h4>
+                                <span class="absolute top-0 right-12 text-xs font-semibold bg-accent text-white px-2 py-0.5 rounded-full transform -translate-y-2 translate-x-4">Save 20%</span>
+                            </div>
+                            <div class="text-xl font-semibold text-primary dark:text-white group-hover:text-accent transition-colors">$195</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: PACKAGES & COMBOS -->
+        <section class="py-24 bg-secondary dark:bg-[#1a1a1a]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl font-serif text-primary dark:text-white mb-4">Curated Packages</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Combining our most popular services for the ultimate smooth experience.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Package 1 -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-serif text-primary dark:text-white mb-2">Smooth Starter</h3>
+                            <p class="text-sm text-gray-500">Perfect for first-time clients.</p>
+                        </div>
+                        <div class="text-4xl font-serif text-primary dark:text-white mb-8 border-b border-gray-100 dark:border-gray-700 pb-6">$85</div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Brows
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Underarms
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Half Legs
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-outline w-full hover:border-accent">Select Package</a>
+                    </div>
+                    
+                    <!-- Package 2 -->
+                    <div class="bg-primary p-8 rounded-2xl shadow-xl flex flex-col h-full transform lg:-translate-y-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute top-0 right-0 bg-accent text-white text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-bl-xl rounded-tr-2xl">Most Popular</div>
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-serif text-white mb-2">Weekend Ready</h3>
+                            <p class="text-sm text-white/70">The essentials for a flawless getaway.</p>
+                        </div>
+                        <div class="text-4xl font-serif text-white mb-8 border-b border-white/20 pb-6">$125</div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-center gap-3 text-white/90">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Full Face or Brows
+                            </li>
+                            <li class="flex items-center gap-3 text-white/90">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Brazilian
+                            </li>
+                            <li class="flex items-center gap-3 text-white/90">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Underarms
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center hover:bg-white">Select Package</a>
+                    </div>
+                    
+                    <!-- Package 3 -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full md:col-span-2 lg:col-span-1 md:w-1/2 md:mx-auto lg:w-full lg:mx-0" data-aos="fade-up" data-aos-delay="300">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-serif text-primary dark:text-white mb-2">Full Body Glow</h3>
+                            <p class="text-sm text-gray-500">Complete head-to-toe smoothness.</p>
+                        </div>
+                        <div class="text-4xl font-serif text-primary dark:text-white mb-8 border-b border-gray-100 dark:border-gray-700 pb-6">$175</div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Brazilian
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Full Legs & Underarms
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                                <i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Free soothing mask
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-outline w-full hover:border-accent">Select Package</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: BOOKING CTA -->
+        <section class="py-24 bg-white dark:bg-[#121212] text-center border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+                <i data-lucide="calendar-heart" class="w-12 h-12 text-accent mx-auto mb-6"></i>
+                <h2 class="text-4xl font-serif text-primary dark:text-white mb-6">Choose your treatment and reserve your time.</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-10">We recommend booking in advance, especially for evening and weekend appointments.</p>
+                <a href="contact.html" class="btn-primary">Book Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-secondary dark:bg-[#111111] pt-20 pb-10 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Col -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6 group inline-flex">
+                        <i data-lucide="sparkles" class="text-accent w-8 h-8 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-serif text-2xl font-semibold tracking-wide text-primary dark:text-white">VelvetGlow</span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+                        A premium sanctuary dedicated to the art of gentle, effective body hair removal. Experience smooth like never before.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 hover:scale-110 hover:shadow-md transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 hover:scale-110 hover:shadow-md transition-all duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links Col 1 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Studio</h4>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact & Location</a></li>
+                        <li><a href="pricing.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Pricing Menu</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links Col 2 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Body Waxing</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Facial Waxing</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Organic Sugaring</a></li>
+                        <li><a href="aftercare.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Aftercare Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-primary dark:text-white">Stay Smooth</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe for skincare tips and exclusive studio offers.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-3 focus:outline-none focus:border-accent w-full text-sm dark:text-white" required>
+                        <button type="submit" class="btn-primary py-3 w-full text-sm uppercase tracking-widest">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">&copy; 2026 VelvetGlow Wax Studio. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <div class="flex gap-4 text-sm text-gray-500">
+                        <a href="#" class="hover:text-accent transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-accent transition-colors">Terms of Service</a>
+                    </div>
+                    <!-- Back to Top Button -->
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top" class="w-10 h-10 rounded-full bg-secondary dark:bg-gray-800 flex items-center justify-center text-primary dark:text-white hover:bg-accent hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true });
+        }
+    </script>
+</body>
+</html>
