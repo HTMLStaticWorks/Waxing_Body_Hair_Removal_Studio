@@ -60,13 +60,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Base Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+#theme-toggle,
+#rtl-toggle,
+#theme-toggle-mobile,
+#mobile-menu-btn {
+    height: 52px;
+    border-radius: 4px; /* Consistent corner radius for all header buttons */
+}
+
+#theme-toggle,
+#rtl-toggle,
+#theme-toggle-mobile,
+#mobile-menu-btn {
+    width: 52px;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+
 .btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: var(--color-primary);
     color: var(--color-secondary);
-    padding: 1rem 2.5rem;
+    padding: 0 2.5rem;
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -85,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     background-color: var(--color-highlight);
     color: var(--color-primary);
-    padding: 1rem 2.5rem;
+    padding: 0 2.5rem;
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -105,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
-    padding: 1rem 2.5rem;
+    padding: 0 2.5rem;
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: uppercase;
