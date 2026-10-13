@@ -85,12 +85,14 @@
 
                 <div class="hidden xl:flex items-center gap-4">
                     <button id="theme-toggle"
-                        class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors">
+                        class="border border-accent text-accent hover:bg-accent hover:text-white transition-colors"
+                        aria-label="Toggle Theme">
                         <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
                         <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
                     </button>
                     <button id="rtl-toggle"
-                        class="p-2 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors">
+                        class="border border-accent text-accent hover:bg-accent hover:text-white transition-colors"
+                        aria-label="Toggle RTL">
                         <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
                     </button>
                     <a href="contact.html" class="btn-primary">Book Now</a>
@@ -391,33 +393,39 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     <!-- Standard 1 -->
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl" data-aos="fade-up"
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up"
                         data-aos-delay="100">
                         <img src="https://images.pexels.com/photos/15764070/pexels-photo-15764070.jpeg" alt="Products"
-                            class="w-full h-40 object-cover rounded-xl mb-6">
-                        <h3 class="text-xl font-serif mb-2 text-white">Premium Products</h3>
-                        <p class="text-sm text-white/70">We exclusively use hard wax imported from Europe and 100%
-                            organic, locally sourced sugaring pastes.</p>
+                            class="w-full h-48 sm:h-52 object-cover">
+                        <div class="p-6 md:p-8 flex flex-col flex-grow">
+                            <h3 class="text-xl font-serif mb-2 text-white">Premium Products</h3>
+                            <p class="text-sm text-white/70 leading-relaxed">We exclusively use hard wax imported from Europe and 100%
+                                organic, locally sourced sugaring pastes.</p>
+                        </div>
                     </div>
 
                     <!-- Standard 2 -->
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl" data-aos="fade-up"
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col h-full" data-aos="fade-up"
                         data-aos-delay="200">
                         <img src="https://images.pexels.com/photos/11024140/pexels-photo-11024140.jpeg" alt="Spaces"
-                            class="w-full h-40 object-cover rounded-xl mb-6">
-                        <h3 class="text-xl font-serif mb-2 text-white">Private Suites</h3>
-                        <p class="text-sm text-white/70">Our sound-insulated, climate-controlled suites ensure your
-                            complete privacy and relaxation during treatment.</p>
+                            class="w-full h-48 sm:h-52 object-cover">
+                        <div class="p-6 md:p-8 flex flex-col flex-grow">
+                            <h3 class="text-xl font-serif mb-2 text-white">Private Suites</h3>
+                            <p class="text-sm text-white/70 leading-relaxed">Our sound-insulated, climate-controlled suites ensure your
+                                complete privacy and relaxation during treatment.</p>
+                        </div>
                     </div>
 
                     <!-- Standard 3 -->
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl md:col-span-2 lg:col-span-1 md:w-1/2 md:mx-auto lg:w-full lg:mx-0"
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col h-full md:col-span-2 lg:col-span-1 md:w-1/2 md:mx-auto lg:w-full lg:mx-0"
                         data-aos="fade-up" data-aos-delay="300">
                         <img src="https://images.pexels.com/photos/4207234/pexels-photo-4207234.jpeg" alt="Specialists"
-                            class="w-full h-40 object-cover rounded-xl mb-6">
-                        <h3 class="text-xl font-serif mb-2 text-white">Licensed Specialists</h3>
-                        <p class="text-sm text-white/70">Every specialist undergoes an intensive 8-week VelvetGlow
-                            bootcamp before ever seeing a client.</p>
+                            class="w-full h-48 sm:h-52 object-cover">
+                        <div class="p-6 md:p-8 flex flex-col flex-grow">
+                            <h3 class="text-xl font-serif mb-2 text-white">Licensed Specialists</h3>
+                            <p class="text-sm text-white/70 leading-relaxed">Every specialist undergoes an intensive 8-week VelvetGlow
+                                bootcamp before ever seeing a client.</p>
+                        </div>
                     </div>
 
                 </div>
